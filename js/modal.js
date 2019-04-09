@@ -54,6 +54,16 @@ $(document).ready(function(){
         dragEnd;
   
     setDimensions();
+
+    $( window ).resize(function() {
+      carousel = $('#carousel'),
+      slideWidth = 700,
+      threshold = slideWidth/3,
+      dragStart, 
+      dragEnd;
+
+      setDimensions();
+    });
   
     $('#next').click(function(){ shiftSlide(-1) })
     $('#prev').click(function(){ shiftSlide(1) })
@@ -74,7 +84,7 @@ $(document).ready(function(){
   
     function setDimensions() {
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       slideWidth = $(window).innerWidth();
+       slideWidth = $(window).innerWidth() - 100;
       }
       $('.carousel-wrap, .slide').css('width', slideWidth);
       $('.modal').css('max-width', slideWidth);
