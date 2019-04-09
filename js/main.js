@@ -9,7 +9,6 @@ $(document).ready(function () {
         var s = $(window).scrollTop();
         var d = $(".main").innerHeight();
         var main = $(".main__header").offset().top;
-        console.log(main);
         if(s <= d - 10) {
             $("header")
                 .removeClass("header__scrolled")

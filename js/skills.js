@@ -34,7 +34,7 @@ $(window).scroll(function () {
         
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
-
+    
     if (come('.donut-segment')) {
         setTimeout(function() {
             $('.donut-segment').each(function (index, element) {
