@@ -84,7 +84,10 @@ $(document).ready(function(){
   
     function setDimensions() {
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       slideWidth = $(window).innerWidth() - 100;
+        slideWidth = $(window).innerWidth() - 100;
+        if($(window).innerWidth() > 1280) {
+          slideWidth = 700;
+        }
       }
       $('.carousel-wrap, .slide').css('width', slideWidth);
       $('.modal').css('max-width', slideWidth);
