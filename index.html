@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="./js/skills.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
 </head>
 <body>
 <header class="header">
@@ -16,10 +17,10 @@
         <nav class="header__nav">
             <ul class="header__nav-menu">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">My Skills</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">My Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -53,12 +54,12 @@
         <h1 class="main__header">Hello, I'm Oleh Smyk</h1>
         <p class="main__text">A multi-talented freelance Web Developmenter & front-end developer</p>
         <hr>
-        <a class="main__btn" href="#">
+        <div class="main__btn">
             <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </a>
+        </div>
     </div>
 </section>
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <h2 class="about__header">About Me</h2>
         <hr>
@@ -73,7 +74,7 @@
         </p>
     </div>
 </section>
-<section class="skills">
+<section class="skills" id="skills">
     <div class="container">
         <h2 class="skills__header">My Skills</h2>
         <hr>
@@ -237,7 +238,7 @@
         </div>    
     </div>
 </section>
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="container">
         <h2 class="portfolio__header">Portfolio</h2>
         <hr>
@@ -294,7 +295,7 @@
         </div>
     </div>
 </section>
-<footer class="footer">
+<footer class="footer" id="contact">
     <div class="container">
         <h2 class="footer__header">Contact</h2>
         <hr>
