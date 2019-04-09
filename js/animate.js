@@ -27,15 +27,23 @@ $(window).scroll(function () {
     var isContact = Utils.isElementInView($('#contact'), false);
 
     if(isAbout) {
-        $('#about').addClass("animate")
+        setTimeout(function() {
+            $('#about').addClass("animate")
+        }, 500);
     }
     if(isSkills) {
-        $('#skills').addClass("animate")
+        setTimeout(function() {
+            $('#skills').addClass("animate")
+        }, 500);
     }
     if(isPortfolio) {
-        $('#portfolio').addClass("animate")
+        setTimeout(function() {
+            $('#portfolio').addClass("animate")
+        }, 500);
     }
     if(isContact) {
-        $('#contact').addClass("animate")
+        setTimeout(function() {
+            $('#contact').addClass("animate")
+        }, 500);
     }
 });
