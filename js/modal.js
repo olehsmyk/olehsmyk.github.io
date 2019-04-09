@@ -3,34 +3,34 @@ $(document).ready(function(){
     // MODAL
     var modalText = {
       tajam: {
-        title: 'Roambi.com',
+        title: 'Tajam',
         tag: 'web development.',
-        detail: 'Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.',
+        detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
       },
       waxom: {
-        title: 'WalkerTracker',
+        title: 'Waxom',
         tag: 'web development.',
-        detail: 'Walker Tracker offers goal management, fitness tracking, and team competitions to companies for internal use. A Ruby on Rails and Javascript companion site for the Walker Tracker App. Features visual metrics and gamified progression system.',
+        detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
       },
       alexis: {
-        title: 'Powur.com',
+        title: 'Alexis',
         tag: 'web development.',
-        detail: 'Powur is a multi-level marketing platform for lead generation, recruitment, and team building. Built with Ruby on Rails and Angular-UI. Makes use of Angular-material for front-end visuals. Features complex user tree heiarchy and commission system.',
+        detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
       },
       startup: {
-        title: 'MyStand',
+        title: 'Startup',
         tag: 'web development.',
-        detail: 'MyStand is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.',
+        detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
       },
       new_providence: {
-        title: 'NeverSurrender',
+        title: 'New Providence',
         tag: 'web development.',
-        detail: 'NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.',
+        detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
       },
       agnecy: {
-        title: 'The Mall',
+        title: 'Basketlove',
         tag: 'web development.',
-        detail: 'The Mall is a place to follow the latest fashion purchases of your friends and favorite celebrities. Built with Node.js and Handlebars. Features the ability to import thousands of top brands products into one shopping site.',
+        detail: 'Basketball theme site. Includes news pages, articles, NBA standings, playoff tables, list of basketball sneakers. There is an integration of different APIs, including regular season, drafts and more. The site is currently not running.',
       }
     };
   
@@ -129,7 +129,7 @@ $(document).ready(function(){
       });
       $.each($('#modal .slide'), function(index, value) {
         $(this).css({
-          background: "url('img/slides/" + id + '-' + index + ".jpg') center center/cover",
+          background: "url('img/slides/" + id + '-' + index + ".png') center center/cover",
           backgroundSize: 'cover'
         });
                 
