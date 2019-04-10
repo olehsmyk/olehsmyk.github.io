@@ -35,12 +35,12 @@ $(document).ready(function () {
             $(`.header__nav-menu li:nth-of-type(${number})`).addClass('active');
         }
     }
-    
+
     $(window).on('scroll', function () {
         addNavActive('#main', 1);
         addNavActive('#about', 2);
         addNavActive('#skills', 3);
         addNavActive('#portfolio', 4);
-    });
+    }); 
 });
 
