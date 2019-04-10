@@ -38,7 +38,20 @@ $(window).scroll(function () {
     }
     if(isPortfolio) {
         setTimeout(function() {
-            $('#portfolio').addClass("animate")
+            $('#portfolio').addClass("animate");
+
+            if($(window).innerWidth() > 992) {
+                $('.portfolio__item:nth-of-type(2)').addClass("slide-in-right-1");
+                $('.portfolio__item:nth-of-type(3)').addClass("slide-in-right-2");
+                $('.portfolio__item:nth-of-type(5)').addClass("slide-in-right-1");
+                $('.portfolio__item:nth-of-type(6)').addClass("slide-in-right-2");
+            }
+
+            else if($(window).innerWidth() > 576) {
+                $('.portfolio__item:nth-of-type(2)').addClass("slide-in-right-1");
+                $('.portfolio__item:nth-of-type(4)').addClass("slide-in-right-1");
+                $('.portfolio__item:nth-of-type(6)').addClass("slide-in-right-1");
+            }
         }, 500);
     }
     if(isContact) {

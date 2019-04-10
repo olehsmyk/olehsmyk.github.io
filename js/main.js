@@ -10,12 +10,20 @@ $(document).ready(function () {
         var main_h = $(".main").innerHeight();
         var main__header = $(".main__header").offset().top;
         if(window_h <= main_h - 10) {
+            var op = (main__header - window_h - 20)/main__header
             $("header")
                 .removeClass("header__scrolled")
-                .css("opacity",(main__header - window_h - 20)/main__header);
+                .css("opacity",op);
+            if(op < 0) {
+                $("header").addClass('display_none');
+            }
+            else {
+                $("header").removeClass('display_none');
+            }
         }
         if(window_h > main_h - 10) {
             $("header")
+                .removeClass('display_none')
                 .addClass("header__scrolled")
                 .css("opacity", 1);
         }
