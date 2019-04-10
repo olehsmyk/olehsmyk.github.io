@@ -6,28 +6,33 @@ $(document).ready(function(){
         title: 'Tajam',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
+        href: 'tajam',
       },
       waxom: {
         title: 'Waxom',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
+        href: 'waxom',
       },
       alexis: {
         title: 'Alexis',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
+        href: 'alexis',
       },
       startup: {
         title: 'Startup',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
+        href: 'startup',
       },
       new_providence: {
         title: 'New Providence',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
+        href: 'new_providence',
       },
-      agnecy: {
+      basketlove: {
         title: 'Basketlove',
         tag: 'web development.',
         detail: 'Basketball theme site. Includes news pages, articles, NBA standings, playoff tables, list of basketball sneakers. There is an integration of different APIs, including regular season, drafts and more. The site is currently not running.',
@@ -120,9 +125,12 @@ $(document).ready(function(){
       $('#modal .info__title').text(modalText[id].title);
       $('#modal .info__detail').text(modalText[id].detail);
       $('#modal .info__tag').text(modalText[id].tag);
-      if (modalText[id].link) $('#modal .button').addClass('visible')
-                                                 .parent()
-                                                 .attr('href', modalText[id].link)
+      if (modalText[id].href) {
+        var site_href = './sites/' + modalText[id].href;
+        $('#modal .info__href')
+              .addClass('visible')
+              .attr('href', site_href);
+      } 
   
       $.each($('#modal li'), function(index, value ) {
         $(this).text(modalText[id].bullets[index]);
