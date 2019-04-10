@@ -28,11 +28,11 @@ $(document).ready(function () {
 
         if (($(window).innerHeight() + $(window).scrollTop()) >= $("body").height()) {
             $('.header__nav-menu li').removeClass('active');
-            $(`.header__nav-menu li:nth-of-type(5)`).addClass('active');
+            $('.header__nav-menu li:nth-of-type(5)').addClass('active');
         }
         else if(window_h + header_h >= selector_h) {
             $('.header__nav-menu li').removeClass('active');
-            $(`.header__nav-menu li:nth-of-type(${number})`).addClass('active');
+            $('.header__nav-menu li:nth-of-type('+number+')').addClass('active');
         }
     }
 
