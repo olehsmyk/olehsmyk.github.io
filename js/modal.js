@@ -42,14 +42,17 @@ $(document).ready(function(){
     $('.portfolio__item-btn').on('click', function(){
       fillModal(this.id);
       $('.modal-wrap').addClass('visible');
+      $('body').addClass('block');
     });
   
     $('.close').on('click', function(){
       $('.modal-wrap, #modal .button').removeClass('visible');
+      $('body').removeClass('block');
     });
   
     $('.mask').on('click', function(){
       $('.modal-wrap, #modal .button').removeClass('visible');
+      $('body').removeClass('block');
     });
   
     var carousel = $('#carousel'),
@@ -92,6 +95,9 @@ $(document).ready(function(){
         slideWidth = $(window).innerWidth() - 100;
         if($(window).innerWidth() > 1280) {
           slideWidth = 700;
+        }
+        if($(window).innerWidth() < 426) {
+          slideWidth = $(window).innerWidth() - 20;
         }
       }
       $('.carousel-wrap, .slide').css('width', slideWidth);
