@@ -54,6 +54,12 @@ $(document).ready(function(){
       $('.modal-wrap, #modal .button').removeClass('visible');
       $('body').removeClass('block');
     });
+
+    document.body.ontouchmove = (e) => {
+       if($('body').hasClass('block')) {
+        document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+       }
+    };
   
     var carousel = $('#carousel'),
         slideWidth = 700,
