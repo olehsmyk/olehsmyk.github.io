@@ -57,7 +57,7 @@ $(document).ready(function(){
     
     document.body.addEventListener('touchstart', function(e){
       if($('body').hasClass('block')) {
-        e.preventDefault();
+        // e.preventDefault();
       }
     });
   
