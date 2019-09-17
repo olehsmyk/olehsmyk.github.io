@@ -9,7 +9,6 @@ $(document).ready(function () {
         var window_h = $(window).scrollTop();
         var main_h = $(".main").innerHeight();
         var main__header = $(".main__pretitle").offset().top;
-        console.log(window_h);
 
         if(window_h <= 5) {
             $("header")
