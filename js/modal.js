@@ -7,35 +7,42 @@ $(document).ready(function(){
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
         href: 'tajam',
+        slides: 5,
       },
       waxom: {
         title: 'Waxom',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
         href: 'waxom',
+        slides: 5,
       },
       alexis: {
         title: 'Alexis',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
         href: 'alexis',
+        slides: 5,
       },
       startup: {
         title: 'Startup',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
         href: 'startup',
+        slides: 5,
       },
       new_providence: {
         title: 'New Providence',
         tag: 'web development.',
         detail: 'PSD-page is converted to HTML. This work includes HTML, CSS, JS (including jQuery).',
         href: 'new_providence',
+        slides: 5,
       },
-      basketlove: {
-        title: 'Basketlove',
+      nba_parser: {
+        title: 'NBA Parser',
         tag: 'web development.',
-        detail: 'Basketball theme site. Includes news pages, articles, NBA standings, playoff tables, list of basketball sneakers. There is an integration of different APIs, including regular season, drafts and more. The site is currently not running.',
+        detail: 'On this site, I integrate the NBA regular season standings with help API from stats.nba.com.',
+        href: 'nba_parser',
+        slides: 2,
       }
     };
   
@@ -147,6 +154,22 @@ $(document).ready(function(){
       $.each($('#modal li'), function(index, value ) {
         $(this).text(modalText[id].bullets[index]);
       });
+
+      $('.slide').remove();
+      var numberOfSlides = modalText[id].slides-1;
+
+      if(modalText[id].slides-1<3) {
+        numberOfSlides = 2;
+      }
+
+      for(let i_2 = 0; i_2 <= numberOfSlides; i_2++) {
+        let div = document.createElement("div");
+        div.classList = 'slide';
+        $('#carousel').append(div);
+      }
+
+      setDimensions();
+      if(modalText[id].slides)
       $.each($('#modal .slide'), function(index, value) {
         $(this).css({
           background: "url('img/slides/" + id + '-' + index + ".png') center center/cover",
