@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NBA Standing Parser</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>NBA Standing Parser</h1>
+        <p>Data taken from <a href="https://nba.com">nba.com</a> and <a href="https://stats.nba.com">stats.nba.com</a></p>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="nav ">
+                <div class="btn years-btn" id="2016-17">
+                    2016-17
+                </div>
+                <div class="btn years-btn" id="2017-18">
+                    2017-18
+                </div>
+                <div class="btn years-btn" id="2018-19">
+                    2018-19
+                </div>
+                <div class="btn years-btn btn-active" id="2019-20">
+                    2019-20
+                </div>
+            </div>
+            <div class="nav">
+                <div class="btn btn-active" id="west_btn">
+                    West
+                </div>
+                <div class="btn" id="east_btn">
+                    East
+                </div>
+            </div>
+            <table class="standing standing-active" id="west_table">
+                <thead>
+                    <tr>
+                    <th style="border-right: 2px solid silver">#</th>
+                    <th class="th__team">Team</th>
+                    <th>Win</th>
+                    <th>Lose</th>
+                    <th>Win%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="0_w"><td>1</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="1_w"><td>2</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="2_w"><td>3</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="3_w"><td>4</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="4_w"><td>5</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="5_w"><td>6</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="6_w"><td>7</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="7_w" style="border-bottom: 2px solid #fa713a;"><td>8</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="8_w"><td>9</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="9_w"><td>10</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="10_w"><td>11</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="11_w"><td>12</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="12_w"><td>13</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="13_w"><td>14</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="14_w"><td>15</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            <table class="standing standing-noactive" id="east_table">
+                <thead>
+                    <tr>
+                    <th style="border-right: 2px solid silver">#</th>
+                    <th class="th__team">Team</th>
+                    <th>Win</th>
+                    <th>Lose</th>
+                    <th>Win%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="0_e"><td>1</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="1_e"><td>2</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="2_e"><td>3</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="3_e"><td>4</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="4_e"><td>5</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="5_e"><td>6</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="6_e"><td>7</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="7_e" style="border-bottom: 2px solid #fa713a;"><td>8</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="8_e"><td>9</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="9_e"><td>10</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="10_e"><td>11</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="11_e"><td>12</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="12_e"><td>13</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="13_e"><td>14</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                    <tr id="14_e"><td>15</td><td class="td__team"></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+        <p><a href="https://olehsmyk.github.io">&#8592; Back to Portfolio</a></p>
+        <p>Data taken from <a href="https://nba.com">nba.com</a> and <a href="https://stats.nba.com">stats.nba.com</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./build/js/main.js"></script>
+</body>
+</html>
